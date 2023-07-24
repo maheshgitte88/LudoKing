@@ -214,7 +214,7 @@ function gameLogic(game, playerId, pos, chipsToMove, moveChipsIn) {
 
 function addChatMessage(game, player, text, color=null, visibleFor=null) {
     game.chatMessages.push({player: player, time: new Date(), text: text, color: color, visibleFor: visibleFor});
-    //io.emit("update", "" + game.gameId);
+    io.emit("update", "" + game.gameId);
 }
 
 function checkWin(game) {
